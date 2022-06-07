@@ -4,13 +4,13 @@
 #After installing Ubuntu on the EC2 instance, and necessary permission was given to access it from the internet, thr instance was accessed via ssh connection.
 #For the LAMP Project, the first step was installation of Apache server  as shown below:       which was confirmed working in the fig labeled(Apache-WEb-Test.png).
 #update a list of packages in package manager
-sudo apt update
+$sudo apt update
 
 #run apache2 package installation
-sudo apt install apache2
+$sudo apt install apache2
 
 #To verify that apache2 is running as a Service in our OS, use following command
-sudo systemctl status apache2
+$sudo systemctl status apache2
 #output of the status check is shown in file **Apache-install.png**
 
 #Next port 80 was opened on the EC2 instance to allow inbound connections via the web.  Output confirmed in file **Apache-web-Test.png**
@@ -29,7 +29,7 @@ $sudo mysql_secure_installation
 #Next is the installation of  PHP, the final component in the LAMP stack.
 sudo apt install php libapache2-mod-php php-mysql
 #Other dependencies were also installed with it: php-mysql & libapache2-mod-php
-# Once the installation is finished(logs outpu in **PHP-Install.png**), the following command was run to confirm  PHP version.. Output in file **PHP-Install-COnfirm.png**
+#Once the installation is finished(logs output in **PHP-Install.png**), the following command was run to confirm  PHP version. Output in file **PHP-Install-Confirm.png**
 $php -v
 
 #FInally, a virtual host was create on the installed website first by creating a new subdirectory inside the default web root folder(/var/www).
